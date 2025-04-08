@@ -15,7 +15,7 @@ class _MyCounterCardState extends State<CounterCard> {
   void _increment() {
     setState(() {
       counter++;
-      widget.onChanged(counter); // 🔁 neue Zahl nach oben melden
+      widget.onChanged(counter);
     });
   }
 

@@ -27,7 +27,11 @@ class _MainScreenState extends State<MainScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             for (int i = 0; i < _counterValues.length; i++) ...[
-              CounterCard(onChanged: (val) => _updateCounter(i, val)),
+              CounterCard(
+                onChanged: (val) {
+                  _updateCounter(i, val);
+                },
+              ),
               const SizedBox(height: 8),
             ],
             const SizedBox(height: 16),
